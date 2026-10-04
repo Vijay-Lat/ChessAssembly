@@ -1,5 +1,5 @@
 
-
+// always make the string into array 
 export function reverseStr(str) {
     let reframe = "";
     console.log(str?.length,"length");

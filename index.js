@@ -1,5 +1,6 @@
 import { ArrayStructure } from "./ArrayStructure.js";
-import { firstRecurringNum } from "./recurring.js";
+import { LinkedList } from "./LinkedList.js";
+import { firstRecurringNum, firstRecurringNum2 } from "./recurring.js";
 import { mergeSortedArrays, reverseStr } from "./string.js";
 
 function helloWorld(){
@@ -42,4 +43,11 @@ const str =reverseStr("ierDna si eman yM iH");
 console.log(str,"str");
 console.log(mergeSortedArrays([3,6],[3]));
 
-console.log(firstRecurringNum([1,2,2,4,6]),"recurring");
+console.log(firstRecurringNum([1,3,3,2,1]),"recurring");
+console.log(firstRecurringNum2([1,3,3,2,1]),"recurring2");
+
+const newLinkList =  new LinkedList(10);
+newLinkList.append(5);
+newLinkList.append(16);
+newLinkList.prepend(24);
+console.log(newLinkList,"Link")
