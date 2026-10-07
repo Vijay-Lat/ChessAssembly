@@ -1,3 +1,10 @@
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
 export class LinkedList {
 
     constructor(value) {
@@ -18,29 +25,86 @@ export class LinkedList {
     }
 
     append(value) {
-        const newNode = {
-            value: value,
-            next: null,
-        }
+        // const newNode = {
+        //     value: value,
+        //     next: null,
+        // }
+        const newNode = new Node(value);
         this.tail.next = newNode;
         this.tail = newNode;
         this.length++;
         return this;
-       }
+    }
 
-        // ZTM method 
-        // newNode.next = this.head ;
-        // this.head = newNode
-       prepend(value){
-        const newNode = {
-            value: value,
-            next: null,
-        }
-       ;
+
+    prepend(value) {
+        //     const newNode = {
+        //         value: value,
+        //         next: null,
+        //     }
+        //    ;
+        const newNode = new Node(value);
+
         newNode.next = this.head;
-        this.head= newNode;
-        this.length ++;
+        this.head = newNode;
+        this.length++;
         return this;
-       }
+    }
+
+    printList() {
+        const arrayVal = [];
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            arrayVal.push(currentNode?.value);
+            currentNode = currentNode?.next;
+        }
+        return arrayVal;
+    }
+
+
+    insert(index, value) {
+        if (index === 0) {
+            this.prepend(value);
+            return this.printList();
+        }
+        if (index >= this.length) {
+            this.append(value);
+            return this.printList();
+
+        }
+        const leader = this.traverseToIndex(index);
+        const nextToLeader = leader.next;
+        const newNode = new Node(value);
+        leader.next = newNode;
+        newNode.next = nextToLeader;
+        this.length++;
+        return this.printList();
+    }
+    traverseToIndex(index) {
+        let counter = 0;
+        let currentNode = this.head;
+        while (counter < index) {
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode;
+    }
+
+    remove(index) {
+        if(index === 0){
+            this.head = this.head.next;
+
+        }
+        if(index > 0){
+        const leader = this.traverseToIndex(index);
+        const removeItem = leader.next;
+        const moveItem = removeItem.next;
+        leader.next = moveItem;
+        }
+        this.length--;
+        return this.printList();
+
+    }
+
 }
 

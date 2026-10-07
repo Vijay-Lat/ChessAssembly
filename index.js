@@ -2,15 +2,16 @@ import { ArrayStructure } from "./ArrayStructure.js";
 import { LinkedList } from "./LinkedList.js";
 import { firstRecurringNum, firstRecurringNum2 } from "./recurring.js";
 import { mergeSortedArrays, reverseStr } from "./string.js";
+import { twoSum } from "./twoSumtarget.js";
 
 function helloWorld(){
-    console.log("Implemented",this);
+    // console.log("Implemented",this);
 }
 helloWorld();
 
 const whatIsThis = ()=>{
     const name = "Name"
-    console.log(this,"What is this");
+    // console.log(this,"What is this");
 }
 
 whatIsThis();
@@ -36,18 +37,20 @@ array.push('6');
 
 array.delete(3);
 
-console.log(array,"seee"
-)
+// console.log(array,"seee")
 
 const str =reverseStr("ierDna si eman yM iH");
-console.log(str,"str");
-console.log(mergeSortedArrays([3,6],[3]));
+// console.log(str,"str");
+// console.log(mergeSortedArrays([3,6],[3]));
 
-console.log(firstRecurringNum([1,3,3,2,1]),"recurring");
-console.log(firstRecurringNum2([1,3,3,2,1]),"recurring2");
+// console.log(firstRecurringNum([1,3,3,2,1]),"recurring");
+// console.log(firstRecurringNum2([1,3,3,2,1]),"recurring2");
 
 const newLinkList =  new LinkedList(10);
 newLinkList.append(5);
 newLinkList.append(16);
 newLinkList.prepend(24);
 console.log(newLinkList,"Link")
+console.log(newLinkList.printList());
+console.log(newLinkList.insert(8,76));
+// console.log(twoSum([1,2,4],6));

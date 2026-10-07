@@ -2,9 +2,9 @@
 // always make the string into array 
 export function reverseStr(str) {
     let reframe = "";
-    console.log(str?.length,"length");
+    // console.log(str?.length,"length");
     for (let i =( str?.length-1); i >= 0; i--) {
-        console.log(str[i],"what")
+        // console.log(str[i],"what")
         reframe = reframe + str[i];
     }
     return reframe;
