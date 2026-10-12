@@ -1,4 +1,5 @@
 import { ArrayStructure } from "./ArrayStructure.js";
+import { DoublyLinkedList } from "./DoublyLinkedList.js";
 import { LinkedList } from "./LinkedList.js";
 import { firstRecurringNum, firstRecurringNum2 } from "./recurring.js";
 import { mergeSortedArrays, reverseStr } from "./string.js";
@@ -47,10 +48,14 @@ const str =reverseStr("ierDna si eman yM iH");
 // console.log(firstRecurringNum2([1,3,3,2,1]),"recurring2");
 
 const newLinkList =  new LinkedList(10);
+const prevLinkedList = new DoublyLinkedList(6);
 newLinkList.append(5);
 newLinkList.append(16);
 newLinkList.prepend(24);
 console.log(newLinkList,"Link")
 console.log(newLinkList.printList());
 console.log(newLinkList.insert(8,76));
+prevLinkedList.prepend(5);
+prevLinkedList.append(7);
+console.log(prevLinkedList,"prev");
 // console.log(twoSum([1,2,4],6));

@@ -20,4 +20,18 @@ export class DoublyLinkedList{
          this.length++;
 
     }
+
+    prepend(value){
+        const newNode ={
+            value,
+            next:null,
+            prev:null,
+        }
+        newNode.next = this.head;
+        this.head.prev = newNode;
+        this.head = newNode;
+        this.length++;
+        return this;
+
+    }
 }

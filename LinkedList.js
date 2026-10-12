@@ -102,7 +102,7 @@ export class LinkedList {
         leader.next = moveItem;
         }
         this.length--;
-        return this.printList();
+        return this.printList(); 
 
     }
 
