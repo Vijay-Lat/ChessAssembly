@@ -31,7 +31,7 @@ export class ArrayStructure {
     }
 
     reOrderItems(index) {   
-        console.log(this.length,"lengthOrder")
+        // console.log(this.length,"lengthOrder")
         // for (let i = 0; i < this.length; i++) {
         //     console.log('\n'+i);
         //     if (i >= index) {
