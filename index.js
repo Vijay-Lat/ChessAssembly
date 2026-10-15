@@ -1,4 +1,5 @@
 import { ArrayStructure } from "./ArrayStructure.js";
+import { CheckWhile } from "./continueWhile.js";
 import { DoublyLinkedList } from "./DoublyLinkedList.js";
 import { LinkedList } from "./LinkedList.js";
 import { firstRecurringNum, firstRecurringNum2 } from "./recurring.js";
@@ -58,4 +59,5 @@ console.log(newLinkList.insert(8,76));
 prevLinkedList.prepend(5);
 prevLinkedList.append(7);
 console.log(prevLinkedList,"prev");
+new CheckWhile();
 // console.log(twoSum([1,2,4],6));
