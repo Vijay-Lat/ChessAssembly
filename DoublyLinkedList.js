@@ -34,4 +34,12 @@ export class DoublyLinkedList{
         return this;
 
     }
+    insert(index,value){
+        const newNode= {
+            value,
+            next:null,
+            prev:null,
+        }
+        const leader = 0;
+    }
 }
